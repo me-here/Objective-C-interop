@@ -12,10 +12,10 @@ class Guitarist: NSObject {
     
     let guitar:Guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
     
-    func perform(notes: [Note]) {
+    func perform(_ notes: [Note]) {
         for note in notes {
             do {
-                try guitar.playNote(note)
+                try guitar.playNote(note: note)
                 
             } catch Error.Broken {
                 print("Quick, replace the string!")

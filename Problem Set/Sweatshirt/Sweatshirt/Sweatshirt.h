@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, ShirtSize) {
 
 @interface Sweatshirt : NSObject
 
+// None of these need nullability annotations
+
 @property (nonatomic) BOOL hasHood;
 @property (nonatomic) BOOL clean;
 @property (nonatomic) ShirtSize size;

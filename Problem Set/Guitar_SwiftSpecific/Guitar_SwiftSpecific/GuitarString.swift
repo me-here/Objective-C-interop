@@ -9,7 +9,7 @@
 import Cocoa
 
 
-enum Error: ErrorType {
+enum Error: Swift.Error {
     case Broken
     case OutOfTune
 }

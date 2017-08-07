@@ -11,8 +11,8 @@
 
 @interface WashingMachine : NSObject
 
-@property (nonatomic) NSArray *clothes;
+@property (nonatomic) NSArray* _Nullable clothes; // Washing machine can be empty
 
--(Sweatshirt*)wash:(Sweatshirt*)sweatshirt;
+-(Sweatshirt*_Nullable)wash:(Sweatshirt*_Nullable)sweatshirt;   // You can still start an empty wash cycle
 
 @end
