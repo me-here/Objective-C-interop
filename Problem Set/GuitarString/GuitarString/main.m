@@ -16,15 +16,16 @@ int main(int argc, const char * argv[]) {
         GuitarString *gS = [[GuitarString alloc] init];
         
         // b. Create an NSError
-        NSError *error;
+        NSError *error = nil;
         
         // c. Call the method pluck(velocity: Float)
-        [gS pluck: 0.7];
+        [gS pluckWithVelocity:0.9 error: &error];
         
         // d. Check if an error was returned
-        
-        
-        // e. Log an error if one was returned
+        if(error != nil) {
+            // e. Log an error if one was returned
+            NSLog(@"%@", error.localizedDescription);
+        }
 
     }
     return 0;
