@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RPSGame.h"
+@class RPSTurn;
 
 @interface RPSController : NSObject
 
