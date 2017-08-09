@@ -18,3 +18,4 @@ let randomIndex = Int(arc4random_uniform(2))
 let tool = myToolbox.tools[randomIndex]
 
 (tool as? Drill)?.screw()
+(tool as? Hammer)?.drive()
