@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Guitarist: NSObject {
+@objc class Guitarist: NSObject {
     
     let guitar:Guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
     
@@ -17,10 +17,10 @@ class Guitarist: NSObject {
             do {
                 try guitar.playNote(note: note)
                 
-            } catch Error.Broken {
+            } catch error.Broken {
                 print("Quick, replace the string!")
                 break
-            } catch Error.OutOfTune {
+            } catch error.OutOfTune {
                 print("Uh oh! Tuning break.")
                 break
             } catch {
